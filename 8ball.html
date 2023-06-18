@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+
+<body>
+
+<div>
+
+<h2><center>Magic 8 Ball</center></h2>
+
+<center><form>
+What is your Question?<br><br><br>
+	<!-- <input type="button" onClick="recognition.start()" value="record"> -->
+	<input type="text" name="Question" id="myInput" size="100px">
+	<br><br>
+  <center><a href="#" onclick="Answer()">Answer</a></center>
+
+<br>
+<center><p id="answer"></p>
+</center>
+</div>
+</body>
+
+
+<style>
+a{
+	color: #1af271
+}
+p,h2,form{
+	color: white;
+}
+div{
+	background:radial-gradient(blue, black);
+}
+body{
+	background-size: 500px 500px;
+        background-repeat: no-repeat;
+	background-image: url("../home/scott/Documents/8ball/Barkerbaggies-Pool-Ball-Ball-8.ico");
+	background-color: black;
+}
+</style>
+
+<script type="text/javascript">
+
+		function Answer(){
+			var x = Math.floor(Math.random() * 10);
+			console.log(x);
+		  var answer;
+			switch (x) {
+					case 0:
+						answer = "Outlook not so Good";
+					break;
+					case 1:
+						answer = "No";
+					break;
+					case 2:
+						answer = "Maybe";
+					break;
+					case 3:
+						answer = "All Signs Point to Yes";
+					break;
+					case 4:
+						answer = "I doubt it";
+					break;
+					case 5:
+						answer = "Sure";
+					break;
+					case 6:
+						answer = "Heck No!";
+					break;
+					case 7:
+						answer = "Outlook Good";
+					break;
+					case 8:
+						answer = "No Way!";
+					break;
+					case 9:
+						answer = "Definitely";
+					break;
+
+			}
+
+			 document.getElementById("answer").innerHTML = answer;
+		}
+
+	</script>
+	</html>
